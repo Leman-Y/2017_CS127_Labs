@@ -3,11 +3,11 @@ for x in range(1,101):
     if x%3==0 and x%5==0:
         msg=('fizzbuzz')
     elif x%3==0:
-            msg=('fizz')
+        msg=('fizz')
     elif x%5==0:
-            msg=('buzz')
+        msg=('buzz')
     else:
-            msg=str(x)
+        msg=x
     print(msg)
         
 
