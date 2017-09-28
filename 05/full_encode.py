@@ -11,7 +11,7 @@ def full_encode(s):
     s=collections.deque(s)
     for i in range(len(s)):
         s.rotate(i)
-    return s
+        print(s)
 
 print(full_encode('abc'))
 print(full_encode('abcd'))
