@@ -76,6 +76,8 @@ def full_encode(s):
         print(encode_string(s,i) + "\n")
         
 full_encode('abcd1')
+print('\n')
+#full_encode('xyz')
 
 '''
 NOTES:
@@ -94,6 +96,7 @@ NOTES: 10/1/16
     not >= ord(z)
 -This fixed my problem
 -I did print(full_encode(___)), which gave me none in the end which was not needed. I just had to do full_encode, because in my function it already says print.
-    so doing print(full_encode(___)) is redundant and gives me the none as well. 
+    so doing print(full_encode(___)) is redundant and gives me the none as well.
+-RANGE(X) DOES NOT INCLUDE X BUT X-1. EXCLUSIVE
 '''
 
