@@ -74,11 +74,11 @@ print(encode_string2('abcd1',1))
 def full_encode(s):
     for i in range(26):
         print(encode_string(s,i) + "\n")
-
         
 full_encode('abcd1')
 
 '''
+NOTES:
 I tried to incorporate a function without a function but it did not work.
 def encode_string(string,r):
     for letter in string:
@@ -88,4 +88,12 @@ def encode_string(string,r):
     return newnew
         
 print(encode_string('abc1',1))
+
+NOTES: 10/1/16
+- So my problem for full encode was that when I rotate a 25 times it would get ` instead of z. I knew I messed up. Encode letter had to be > ord(z)
+    not >= ord(z)
+-This fixed my problem
+-I did print(full_encode(___)), which gave me none in the end which was not needed. I just had to do full_encode, because in my function it already says print.
+    so doing print(full_encode(___)) is redundant and gives me the none as well. 
 '''
+
