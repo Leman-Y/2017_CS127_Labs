@@ -21,7 +21,7 @@ for j in range(len(grid[0])):
 print(grid[0][0], [1][0], [2][0], [3][0], [4][0], end='')
 print(grid[1][0])
 '''
-
+'''
 print(grid[0][0],end='')
 print(grid[1][0],end='')
 print(grid[2][0],end='')
@@ -81,10 +81,11 @@ print(grid[5][5],end='')
 print(grid[6][5],end='')
 print(grid[7][5],end='')
 print(grid[8][5])
-'''
+
 print(grid[0][0],grid[1][0],grid[2][0],grid[3][0],grid[4][0],grid[5][0],grid[6][0],grid[7][0],grid[8][0])
 print(grid[0][1],grid[1][1],grid[2][1],grid[3][1],grid[4][1],grid[5][1],grid[6][1],grid[7][1],grid[8][1])
 for i in range(len(grid[0:-1][0])):
-    print (i)
-How do i print the .s and 0s in the [x][0] place with for i in range and print?
+    print (str(chr(i)))
+#How do i print the .s and 0s in the [x][0] place with for i in range and print?
 '''
+print(grid[0][0],grid[1][0],grid[2][0],grid[3][0],grid[4][0],grid[5][0],grid[6][0],grid[7][0],grid[8][0])

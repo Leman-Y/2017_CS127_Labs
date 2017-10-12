@@ -1,14 +1,14 @@
 
 for x in range(1,101):
     if x%3==0 and x%5==0:
-        msg=('fizzbuzz')
+        x=('fizzbuzz')
     elif x%3==0:
-        msg=('fizz')
+        x=('fizz')
     elif x%5==0:
-        msg=('buzz')
+        x=('buzz')
     else:
-        msg=x
-    print(msg)
+        x
+    print(x)
         
 
 '''

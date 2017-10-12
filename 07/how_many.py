@@ -1,0 +1,2 @@
+q='wewew'
+print(q)

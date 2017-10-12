@@ -20,23 +20,44 @@ def alphabet_position(letter, number):
             ans = ans - ord('Z') + ord('A')-1
         return chr(ans)
 print(alphabet_position('y',2))
-'''
+
+THIS IS WRONG vvvvvvvvvvvvvvvvvvvvvv
+
 def encode_letter(letter, r): #letter is letter. r is rotation amount
     newletter=ord(letter)+r
     if ord(letter)+r>122 and letter.islower():
         newletter=newletter-ord('z')+ord('a')-1
+        
     elif ord(letter)+r>90 and letter.isupper():
         newletter=newletter-ord('Z')+ord('A')-1
     return chr(newletter)
+'''
+def encode_letter(letter, r): #letter is letter. r is rotation amount
+    newletter=ord(letter)+r
+    if ord(letter)+r>122 or ord(letter)+r<97 and letter.islower():
+        newletter=(ord(letter)+r)-97
+        newletter=newletter%26
+        newletter=newletter+97
+    elif ord(letter)+r>90 and letter.isupper():
+        newletter=(ord(letter)+r)-65
+        newletter=newletter%26
+        newletter=newletter+65
+    return chr(newletter)
 
+print(encode_letter('a',52))
+print('\n')
+
+'''
 print(encode_letter('A',1))
 print(encode_letter('Z',1))
 print(encode_letter('a',1))
 print(encode_letter('z',1))
 print(encode_letter('a',25))
 print(encode_letter('A',25))
-print('\n')
+print(encode_letter('z',27))
+print(encode_letter('z',-23))
 
+'''
 
 def encode_string(string,r):
     result=''
@@ -55,7 +76,7 @@ print(encode_string('abc1',25))
 #it will end for loop prematurely if you put return in for loop
 print('\n')
 
-'''
+
 def encode_string2(string,r):
     result=''
     for letter in string:
@@ -69,7 +90,8 @@ def encode_string2(string,r):
 
 print(encode_string2('abc1',1))
 print(encode_string2('abcd1',1))
-'''
+print(encode_string2('abcd1',25))
+print('\n')
 
 def full_encode(s):
     for i in range(26):
@@ -98,5 +120,8 @@ NOTES: 10/1/16
 -I did print(full_encode(___)), which gave me none in the end which was not needed. I just had to do full_encode, because in my function it already says print.
     so doing print(full_encode(___)) is redundant and gives me the none as well.
 -RANGE(X) DOES NOT INCLUDE X BUT X-1. EXCLUSIVE
-'''
 
+NOTES: 10/3/16
+- So my problem for encode_letter was that if I encode something with the rotation over 26 I get a random symbol in the ascii table. I need to use modulus (%).
+    When you use x%26 you will get your letter's position in the alphabet
+'''

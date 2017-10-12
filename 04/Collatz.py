@@ -8,8 +8,13 @@ def collatz(number):
         return 3*number+1
     
 print('Input any number')
-x=input()
-while x!=1:
-    x=collatz(int(x))
+x=int(input())
+if x<=0:
+    print('please enter a positive number')
+else:
+    while x!=1:
+        x=collatz(int(x))
+
+    
     
     
