@@ -74,7 +74,7 @@ def mode2(l):
     print(r)
 
 u=[1,2,3,4,5,10,10]
-mode2(u)
+print(mode2(u))
 '''
 HW HELP:
 -For some reason in mode2 in the second for loop I try to get the highest number, which would be the one that is the mode...

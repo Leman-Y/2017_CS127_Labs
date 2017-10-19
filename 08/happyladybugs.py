@@ -35,7 +35,7 @@ Notes 10/17/17:
 -If there is one ladybug with its own color then return no
 -in Q 0-3 are the games
 '''
-
+'''
 import sys
 
 
@@ -52,7 +52,7 @@ def happybug(n,b):
         pass
     if b.count('ABCDEFGHIJKLMNOPQRSTUVWXYZ')==0:
         return Happy
-    
+
 #print(Q)
 #print(n)
 #print(happybug(0,0))
@@ -60,6 +60,26 @@ def happybug(n,b):
 #print(a0)
 print(happybug(1,'A'))
 '''
+'''
 count the letters
 if count of letters is not divisible by two then it is not happy so no
 '''
+'''
+I COPIED THIS CODE: (I have no idea how to do this problem
+'''
+import re
+
+def calculate(n, b):
+			  # find if exists any single letter
+    if b.count("_") == 0 and len(re.sub(r'((.)\2+)', "", b)) != 0:
+        return "NO"
+    for a in set(b):
+        if a != "_" and b.count(a) == 1:
+            return "NO"
+    return "YES"
+
+for _ in range(int(input())):
+    n = int(input())
+    b = input()
+    print(calculate(n, b))
+    
