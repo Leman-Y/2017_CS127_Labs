@@ -35,7 +35,7 @@ Notes 10/17/17:
 -If there is one ladybug with its own color then return no
 -in Q 0-3 are the games
 '''
-'''
+
 import sys
 
 
@@ -45,27 +45,28 @@ for a0 in range(Q):
     b = input().strip()
     
 def happybug(n,b):
-    Happy=('Yes')
+    happy=('Yes')
     nothappy=('No')
-    
+    c='ABCDEFGHIJKLMNOPQRSTUVWXYZ_'
     if n==0:
         pass
-    if b.count('ABCDEFGHIJKLMNOPQRSTUVWXYZ')==0:
-        return Happy
+    elif c.count('b')==0:
+        return happy
 
 #print(Q)
 #print(n)
 #print(happybug(0,0))
-#print(b)
+print(b)
 #print(a0)
 print(happybug(1,'A'))
-'''
+
 '''
 count the letters
 if count of letters is not divisible by two then it is not happy so no
 '''
 '''
 I COPIED THIS CODE: (I have no idea how to do this problem
+'''
 '''
 import re
 
@@ -82,4 +83,4 @@ for _ in range(int(input())):
     n = int(input())
     b = input()
     print(calculate(n, b))
-    
+'''

@@ -65,16 +65,22 @@ def mode2(l):
     #print(number)
     #print(q[1])
     #print(q[2])
+    #print(q[6])
     #print('\n')
     for g in q:
         #print(g)
+        #print(q[g])
         if r< q[g]: #r=1 but 1 is less than 2 so r should be 2 now not 1
-            r=l[g]
+            r=q[g]
     return r
-    print(r)
+    #print(r)
 
 u=[1,2,3,4,5,10,10]
 print(mode2(u))
+'''
+FOR G IN Q I DID Q OF G WHERE THE ONLY NUMBERS IN G IN Q ARE 1 AND 2
+Q[1] AND Q[2] ARE ALWAYS 1
+'''
 '''
 HW HELP:
 -For some reason in mode2 in the second for loop I try to get the highest number, which would be the one that is the mode...

@@ -11,6 +11,7 @@ def ap(x):
 print(ap(100))
 print(len('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
 '''
+
 def freq(n,l):
     frequency=0
     for number in l:
@@ -34,15 +35,54 @@ def mode2(l):
     r=q[0]
     #print(r)
     #print(number)
-    print(q[5])
+    #print(q[])
     #print(q[2])
     #print('\n')
     for g in q:
         #print(g)
-        if r< q[g]: #r=1 but 1 is less than 2 so r should be 2 now not 1
-            r=q[g]
-    return r
+        if r<g: #r=1 but 1 is less than 2 so r should be 2 now not 1
+            r=g
+            #print(q.index(r))
+            x=q.index(r)
+            
+
+    return l[x]      #saveg
    
 
 u=[1,2,3,4,5,10,10]
 print(mode2(u))
+t=[1,2,3,4,4,4]
+print(mode2(t))
+
+'''
+import sys
+
+
+Q = int(input().strip())
+for a0 in range(Q):
+    n = int(input().strip())
+    b = input().strip()
+    
+def happybug(n,b):
+    Happy=('Yes')
+    nothappy=('No')
+    
+    if n==0:
+        pass
+    if b.count('ABCDEFGHIJKLMNOPQRSTUVWXYZ')==0:
+        return Happy
+'''
+'''
+'''
+'''
+b='ABCDEFGHIJKLMNOPQRSTUVWXYZAPPLE'
+#print(b.count('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+ce='APPLE'
+print(b.count('c'))
+print(b.count('ce'))
+'''
+'''
+b.count wont use the variable c 
+'''
+
+
