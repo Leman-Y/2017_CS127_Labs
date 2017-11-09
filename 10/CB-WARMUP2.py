@@ -112,3 +112,8 @@ def string_match1(a,b):
     return count
 
 print(string_match1('aabbccdd', 'abbbxxd'))
+
+'''
+Notes:
+
+'''
