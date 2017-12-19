@@ -67,6 +67,7 @@ def add_word_across(board,word,r,c):
     sumofscore=0
     
     for count, letter in enumerate(word): #Tell me the position of each letter in the word & the letter itself
+        print(count, letter)
         if board[r][c+count]=='T': #3*score of word
             sumofscore+=score(word)*3
             
@@ -145,15 +146,22 @@ Hello: h= 4 , e=1, l=1 , l=1 , 0=1
 board=make_scrabble_board()
 #print_board(board)
 
-(add_word_across(board,'hello',0,0)) #Run the function. The board is manipualted
+(add_word_across(board,'hello',1,'a')) #Run the function. The board is manipualted
 board1=make_scrabble_board()
 board2=make_scrabble_board()
 board3=make_scrabble_board()
 #print_board(board1)
 print('-----------------------------------')
 
-(add_word_across(board1,'hello',1,0))
+#(add_word_across(board,'hello',1,0))
 
 print('------------------------------------')
 
-(add_word_down(board2,'hello',0,0)) #Should get 29
+#(add_word_down(board2,'hello',0,0)) #Should get 29
+'''
+def a(c):
+    c=1
+    return c
+
+print(a('4'))
+'''
